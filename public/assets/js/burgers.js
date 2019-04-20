@@ -8,7 +8,8 @@ $(function() {
     var eatenState = {
       eaten: true
     };
-
+    
+    $("#eating-modal").modal();
     let sound = document.getElementById("mmm-sound");
     sound.play();
 
