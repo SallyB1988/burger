@@ -1,37 +1,19 @@
-<div class="jumbotron text-center">
-  <h1>ZIPPY'S BURGER SHOP</h1>
-</div>
-
-
-<div class="row">
-  <div class="col-md-4">
-    <h2>Ordered Burgers Go Here</h2>
-      {{#each burgers}}
-        {{#unless eaten}}
-          {{> burgers/burger-order }}
-        {{/unless}}
-      {{/each}}
+<div class="row py-4 justify-content-center title-bar">
+  <div class="col-md-1">
+    <img id="burger-image" class="float-right" src="/assets/images/burger.png">
   </div>
-  <div class="col-md-4">
-    <h2>Something goes here</h2>
-  </div>
-  <div class="col-md-4">
-    <h2>Eaten burgers go here</h2>
-      {{#each burgers}}
-        {{#if eaten}}
-          {{> burgers/burger-order }}
-        {{/if}}
-      {{/each}}
+  <div class="col-md-4 text-center">
+    <h1>ZIPPY'S BURGER SHOP</h1>
+    <h6>You'll be amazed at how fast we serve your burger!</h6>
   </div>
 </div>
 
-
-<hr>
-<div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-    <h2>Order a Burger</h2>
+<div class="row py-2 justify-content-center">
+  <div class="col-md-4">
+        <h3 class="text-center">Place an Order</h3>
     <form class="order-burger-form">
+
+      <div class="mx-2 p-2">
 
       <div class="form-group">
         <label class="mr-2" for="bname">Customer Name:</label>
@@ -39,42 +21,71 @@
       </div>
       <div class="for-group">
         <h6 class="py-1 mt-2">Burger Type: </h6>
-        <input type="radio" name="burger_type" value="ground chuck">Ground Chuck</input>
-        <input type="radio" name="burger_type" value="ground sirloin">Ground Sirloin</input>
-        <input type="radio" name="burger_type" value="salmon">salmon</input>
-        <input type="radio" name="burger_type" value="mushroom" checked>mushroom</input>
-        <input type="radio" name="burger_type" value="bean">Bean</input>
+        <input class="m-1" type="radio" name="burger_type" value="chuck" checked >Ground Chuck</input>
+        <input class="m-1" type="radio" name="burger_type" value="sirloin">Ground Sirloin</input>
+        <input class="m-1" type="radio" name="burger_type" value="salmon">Salmon</input><br>
+        <input class="m-1" type="radio" name="burger_type" value="mushroom">Mushroom</input>
+        <input class="m-1" type="radio" name="burger_type" value="bean">Bean</input>
       </div>
       <div class="for-group">
         <h6 class="py-1 mt-2">Bun: </h6>
-        <input type="radio" name="bun" value="gluten free">GF</input>
-        <input type="radio" name="bun" value="white" checked>White</input>
-        <input type="radio" name="bun" value="wheat">Wheat</input>
+        <input class="m-1" type="radio" name="bun" value="gluten free">Gluten Free</input>
+        <input class="m-1" type="radio" name="bun" value="white" checked>White</input>
+        <input class="m-1" type="radio" name="bun" value="wheat">Wheat</input>
       </div>
       <div class="mb-3 for-group">
         <h6 class="py-1 mt-2">Cheese:</h4>
-        <input type="radio" name="cheese" value="none" checked>None</input>
-        <input type="radio" name="cheese" value="american">American</input>
-        <input type="radio" name="cheese" value="cheddar">Cheddar</input>
-        <input type="radio" name="cheese" value="provolone">Provolone</input>
+        <input class="m-1" type="radio" name="cheese" value="none" checked>None</input>
+        <input class="m-1" type="radio" name="cheese" value="american">American</input>
+        <input class="m-1" type="radio" name="cheese" value="cheddar">Cheddar</input>
+        <input class="m-1" type="radio" name="cheese" value="provolone">Provolone</input>
       </div>
-      <button type="submit">Place Order</button>
-    </form>
+      <button class="d-block mx-auto place-order" type="submit">Place Order</button>
+
+      </div>
+          </form>
+  </div>
+
+
+  <div class="col-md-4">
+    <h3 class="text-center">Served Burgers</h3>
+    <div class="burgers">
+      {{#each burgers}}
+        {{#unless eaten}}
+          {{> burgers/burger-order }}
+        {{/unless}}
+      {{/each}}
+
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h3 class="text-center">Consumed Burgers</h3>
+    <div class="px-2 burgers">
+
+      {{#each burgers}}
+        {{#if eaten}}
+          {{> burgers/burger-order }}
+        {{/if}}
+      {{/each}}
+    </div>
   </div>
 </div>
 
       <!--  Modal  -->
-  <div class="modal" id="eating-modal" data-backdrop="false" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
+  <div class="modal" id="modal-eating"  data-backdrop="false" tabindex="-1" role="dialog">
+    <div class="modal-dialog" id="modal-content" role="document">
       <div class="modal-content">
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-9">
-              <h4 class="mb-2 text-center modal-title">Mmmmmm</h4>
-<iframe src="https://giphy.com/embed/13Kim2zBCo5Jcc" width="300" height="200" frameBorder="0" class="giphy-embed" ></iframe><p><a href="https://giphy.com/gifs/supernatural-dean-winchester-jensen-ackles-13Kim2zBCo5Jcc"></a></p> 
+        <div id="modal-body" class="modal-body">
+
+            <div id="giphy" class="p-0 m-0 col-md-9">
+              {{!-- <img src="https://giphy.com/gifs/supernatural-dean-winchester-jensen-ackles-13Kim2zBCo5Jcc" ></img> --}}
+<iframe src="https://giphy.com/embed/13Kim2zBCo5Jcc" frameBorder="0" class="giphy-embed" ></iframe><p><a href="https://giphy.com/gifs/supernatural-dean-winchester-jensen-ackles-13Kim2zBCo5Jcc"></a></p> 
 </div>
-        </div>
+
       </div>
     </div>
   </div> 
   </div>  
+
+
+  {{!-- <iframe src="https://giphy.com/embed/13Kim2zBCo5Jcc" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/supernatural-dean-winchester-jensen-ackles-13Kim2zBCo5Jcc">via GIPHY</a></p> --}}

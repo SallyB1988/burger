@@ -1,4 +1,37 @@
-#eating-modal {
-  position: absolute !important;
-  top: 250px;
+#modal-eating {
+  position: fixed !important;
+  top: 150px;
+  /* left: 40%; */
+  width: 100%;
+  height: 225px !important;
+
+}
+
+.modal-content {
+  border:  none !important;
+}
+
+#modal-body {
+  background-color: orange;
+  align-self: center;
+}
+
+.burgers {
+  max-height: 400px;
+  overflow: auto ;
+}
+
+#burger-image {
+  height: 100px;
+  /* width: 300px; */
+}
+
+#giphy {
+  /* width: 100%; 
+  height: 100%;
+  object-fit: cover; */
+}
+
+.title-bar, .place-order {
+  background-color: orange;
 }

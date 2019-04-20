@@ -9,7 +9,7 @@ $(function() {
       eaten: true
     };
     
-    $("#eating-modal").modal();
+    $("#modal-eating").modal();
     let sound = document.getElementById("mmm-sound");
     sound.play();
 
