@@ -1,6 +1,5 @@
 // Wait for DOM to be fully loaded
 
-
 $(function() {
 
   $(".eat-burger").on("click", function(event) {

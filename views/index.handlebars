@@ -2,13 +2,13 @@
   <div class="col-md-1">
     <img id="burger-image" class="float-right" src="/assets/images/burger.png">
   </div>
-  <div class="col-md-4 text-center">
+  <div class="col-md-5 text-center">
     <h1>ZIPPY'S BURGER SHOP</h1>
     <h6>You'll be amazed at how fast we serve your burger!</h6>
   </div>
 </div>
 
-<div class="row py-2 justify-content-center">
+<div class="row py-2 justify-content-center main-content">
   <div class="col-md-4">
         <h3 class="text-center">Place an Order</h3>
     <form class="order-burger-form">
@@ -21,24 +21,24 @@
       </div>
       <div class="for-group">
         <h6 class="py-1 mt-2">Burger Type: </h6>
-        <input class="m-1" type="radio" name="burger_type" value="chuck" checked >Ground Chuck</input>
-        <input class="m-1" type="radio" name="burger_type" value="sirloin">Ground Sirloin</input>
-        <input class="m-1" type="radio" name="burger_type" value="salmon">Salmon</input><br>
-        <input class="m-1" type="radio" name="burger_type" value="mushroom">Mushroom</input>
-        <input class="m-1" type="radio" name="burger_type" value="bean">Bean</input>
+        <label><input class="m-1" type="radio" name="burger_type" value="chuck" checked >Ground Chuck</input> </label>
+        <label><input class="m-1" type="radio" name="burger_type" value="sirloin">Ground Sirloin</input> </label>
+        <label><input class="m-1" type="radio" name="burger_type" value="salmon">Salmon</input> </label>
+        <label><input class="m-1" type="radio" name="burger_type" value="mushroom">Mushroom</input> </label>
+        <label><input class="m-1" type="radio" name="burger_type" value="bean">Bean</input> </label>
       </div>
       <div class="for-group">
         <h6 class="py-1 mt-2">Bun: </h6>
-        <input class="m-1" type="radio" name="bun" value="gluten free">Gluten Free</input>
-        <input class="m-1" type="radio" name="bun" value="white" checked>White</input>
-        <input class="m-1" type="radio" name="bun" value="wheat">Wheat</input>
+        <label><input class="m-1" type="radio" name="bun" value="gluten free">Gluten Free</input></label>
+        <label><input class="m-1" type="radio" name="bun" value="white" checked>White</input></label>
+        <label><input class="m-1" type="radio" name="bun" value="wheat">Wheat</input></label>
       </div>
       <div class="mb-3 for-group">
         <h6 class="py-1 mt-2">Cheese:</h4>
-        <input class="m-1" type="radio" name="cheese" value="none" checked>None</input>
-        <input class="m-1" type="radio" name="cheese" value="american">American</input>
-        <input class="m-1" type="radio" name="cheese" value="cheddar">Cheddar</input>
-        <input class="m-1" type="radio" name="cheese" value="provolone">Provolone</input>
+        <label><input class="m-1" type="radio" name="cheese" value="none" checked>None</input></label>
+        <label><input class="m-1" type="radio" name="cheese" value="american">American</input></label>
+        <label><input class="m-1" type="radio" name="cheese" value="cheddar">Cheddar</input></label>
+        <label><input class="m-1" type="radio" name="cheese" value="provolone">Provolone</input></label>
       </div>
       <button class="d-block mx-auto place-order" type="submit">Place Order</button>
 
@@ -78,7 +78,6 @@
         <div id="modal-body" class="modal-body">
 
             <div id="giphy" class="p-0 m-0 col-md-9">
-              {{!-- <img src="https://giphy.com/gifs/supernatural-dean-winchester-jensen-ackles-13Kim2zBCo5Jcc" ></img> --}}
 <iframe src="https://giphy.com/embed/13Kim2zBCo5Jcc" frameBorder="0" class="giphy-embed" ></iframe><p><a href="https://giphy.com/gifs/supernatural-dean-winchester-jensen-ackles-13Kim2zBCo5Jcc"></a></p> 
 </div>
 
@@ -87,5 +86,3 @@
   </div> 
   </div>  
 
-
-  {{!-- <iframe src="https://giphy.com/embed/13Kim2zBCo5Jcc" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/supernatural-dean-winchester-jensen-ackles-13Kim2zBCo5Jcc">via GIPHY</a></p> --}}

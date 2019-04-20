@@ -5,12 +5,17 @@
   <source src="/assets/sounds/mmm.mp3" type="audio/mp3">
 </audio>
 
-<div class="mx-3 my-3 px-5 py-2 border">
+<div class=" row mx-3 my-3 p-1 border burger-card">
+    <div class="col-md-10 pl-2"> 
     <h6>{{name}}</h6>
+    </div>
+    <div class="col-md-2 pr-2">
+    {{#unless eaten}}
+      <button class="eat-burger" data-id="{{id}}" >EAT</button>
+    {{/unless}}
+
+    </div>
     <p class="ml-4 my-0">Burger Type: {{burger_type}}</p>
     <p class="ml-4 my-0">Bun: {{bun}}</p>
     <p class="ml-4 my-0">Cheese: {{cheese}}</p>
-    {{#unless eaten}}
-      <button class="mt-2 eat-burger" data-id="{{id}}" >EAT</button>
-    {{/unless}}
 </div>

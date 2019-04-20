@@ -1,7 +1,19 @@
+body {
+  background-image: url("/assets/images/background.png");
+  height: 100%;
+}
+
+.main-content {
+  background-color: rgb(245, 243, 237);
+}
+
+.burger-card {
+  background-color: white;
+}
+
 #modal-eating {
   position: fixed !important;
-  top: 150px;
-  /* left: 40%; */
+  top: 170px;
   width: 100%;
   height: 225px !important;
 
@@ -9,8 +21,12 @@
 
 .modal-content {
   border:  none !important;
+  background: transparent !important;
 }
 
+.modal {
+  background-color: transparent !important;
+}
 #modal-body {
   background-color: orange;
   align-self: center;
@@ -26,12 +42,12 @@
   /* width: 300px; */
 }
 
-#giphy {
-  /* width: 100%; 
-  height: 100%;
-  object-fit: cover; */
-}
-
 .title-bar, .place-order {
   background-color: orange;
+}
+
+.eat-burger {
+  font-size: 10px;
+  background-color: orange;
+
 }
