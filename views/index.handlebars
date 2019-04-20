@@ -27,20 +27,42 @@
 
 
 <hr>
-<h2>Order a Burger</h2>
-<form class="order-burger-form">
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h2>Order a Burger</h2>
+    <form class="order-burger-form">
 
-  <div class="form-group">
-    <label for="bname">Burger Name:</label>
-    <input type="text" id="bname" name="name">
+      <div class="form-group">
+        <label class="mr-2" for="bname">Customer Name:</label>
+        <input type="text" id="bname" name="name">
+      </div>
+      <div class="for-group">
+        <h6 class="py-1 mt-2">Burger Type: </h6>
+        <input type="radio" name="burger_type" value="ground chuck">Ground Chuck</input>
+        <input type="radio" name="burger_type" value="ground sirloin">Ground Sirloin</input>
+        <input type="radio" name="burger_type" value="salmon">salmon</input>
+        <input type="radio" name="burger_type" value="mushroom" checked>mushroom</input>
+        <input type="radio" name="burger_type" value="bean">Bean</input>
+      </div>
+      <div class="for-group">
+        <h6 class="py-1 mt-2">Bun: </h6>
+        <input type="radio" name="bun" value="gluten free">GF</input>
+        <input type="radio" name="bun" value="white" checked>White</input>
+        <input type="radio" name="bun" value="wheat">Wheat</input>
+      </div>
+      <div class="mb-3 for-group">
+        <h6 class="py-1 mt-2">Cheese:</h4>
+        <input type="radio" name="cheese" value="none" checked>None</input>
+        <input type="radio" name="cheese" value="american">American</input>
+        <input type="radio" name="cheese" value="cheddar">Cheddar</input>
+        <input type="radio" name="cheese" value="provolone">Provolone</input>
+      </div>
+      <button type="submit">Place Order</button>
+    </form>
   </div>
+</div>
 
-  {{!-- <div class="form-group">
-    <label for="btype">Type of Bun</label><br>
-    <input type="radio" name="bun" value="gluten-free">GF<br>
-    <input type="radio" name="bun" value="white" checked>White<br>
-    <input type="radio" name="bun" value="wheat">Wheat<br>
-  </div> --}}
 
-  <button type="submit">Place Order</button>
-</form>
+
+

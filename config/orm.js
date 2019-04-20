@@ -48,7 +48,6 @@ let orm = {
   create: (table, colNames, colVals, cb) => {
     let queryStr = `INSERT INTO ${table} (${colNames.toString()})
     VALUES (${printQuestionMarks(colVals.length)}) `;
-    console.log(queryStr);
     connection.query(queryStr, colVals, (err,result) => {
       if (err) throw err;
       cb(result);

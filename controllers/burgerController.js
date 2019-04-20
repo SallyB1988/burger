@@ -11,14 +11,11 @@ router.get("/", (req, res) => {
     let burgerObj = {
       burgers: data
     };
-    console.log(burgerObj);
     res.render("index", burgerObj);   // render the index page
   })
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-  console.log('inside router.put, result body is: ');
-  console.log(res.body);
   let condition = `id = ${req.params.id}`;
   // update database with new status of 'eaten'
   burger.update(
