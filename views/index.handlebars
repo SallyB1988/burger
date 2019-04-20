@@ -1,43 +1,46 @@
-{{!-- <div class="jumbotron text-center"> --}}
+<div class="jumbotron text-center">
   <h1>ZIPPY'S BURGER SHOP</h1>
-{{!-- </div> --}}
+</div>
 
 
-{{!-- <div class="row"> --}}
-  {{!-- <div class="col-md-4"> --}}
+<div class="row">
+  <div class="col-md-4">
     <h2>Ordered Burgers Go Here</h2>
-    <ul>
       {{#each burgers}}
-        {{> burgers/burger-order }}
+        {{#unless eaten}}
+          {{> burgers/burger-order }}
+        {{/unless}}
       {{/each}}
-
-    </ul>
-
-  {{!-- </div> --}}
-  {{!-- <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
     <h2>Something goes here</h2>
   </div>
   <div class="col-md-4">
     <h2>Eaten burgers go here</h2>
+      {{#each burgers}}
+        {{#if eaten}}
+          {{> burgers/burger-order }}
+        {{/if}}
+      {{/each}}
   </div>
-</div> --}}
+</div>
 
 
-{{!-- <hr>
+<hr>
 <h2>Order a Burger</h2>
-<form class="create-form">
+<form class="order-burger-form">
 
   <div class="form-group">
     <label for="bname">Burger Name:</label>
     <input type="text" id="bname" name="name">
   </div>
 
-  <div class="form-group">
+  {{!-- <div class="form-group">
     <label for="btype">Type of Bun</label><br>
     <input type="radio" name="bun" value="gluten-free">GF<br>
     <input type="radio" name="bun" value="white" checked>White<br>
     <input type="radio" name="bun" value="wheat">Wheat<br>
-  </div>
+  </div> --}}
 
   <button type="submit">Place Order</button>
-</form> --}}
+</form>

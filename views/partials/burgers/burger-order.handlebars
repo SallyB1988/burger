@@ -1,9 +1,6 @@
-    {{!-- <div class="mx-3 my-3 px-5 py-2 border"> --}}
-      <li>
-
-        <h4>{{name}}</h4>
-        <h4>id: {{id}}</h4>
-        <button class="eat-burger" data-id="{{id}}" >EAT</button>
-
-      </li>
-    {{!-- </div> --}}
+<div class="mx-3 my-3 px-5 py-2 border">
+    <h4>{{name}}</h4>
+    {{#unless eaten}}
+      <button class="eat-burger" data-id="{{id}}" >EAT</button>
+    {{/unless}}
+</div>

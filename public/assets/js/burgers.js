@@ -22,4 +22,27 @@ $(function() {
     );
   });
 
+  // Add a new order
+  $(".order-burger-form").on("submit", function(event) {
+    event.preventDefault();
+
+    var newBurger = {
+      name: $("#bname").val().trim()
+      // add , at end of prev line and add new options here
+    };
+
+    // Send the POST request.
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: newBurger
+    }).then(
+      function() {
+        console.log("Burger has been ordered");
+        location.reload();
+      }
+    );
+
+  });
+
+
 });

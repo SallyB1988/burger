@@ -11,6 +11,14 @@ let burger = {
     orm.update("burgers", columnVals, condition, (res) => {
       cb(res);
     })
+  },
+  create: (colNames, colVals, cb) => {
+    console.log('in orm cols is');
+    console.log(colNames);
+    console.log(colVals);
+    orm.create("burgers", colNames, colVals, (res) => {
+      cb(res);
+    })
   }
 };
 
