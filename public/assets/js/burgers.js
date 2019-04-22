@@ -1,6 +1,9 @@
 // Wait for DOM to be fully loaded
 
 $(function() {
+  var bellSound = new Audio("/assets/sounds/order-up.mp3");
+  var eatingSound = new Audio("/assets/sounds/mmm1.mp3");
+
 
   $(".eat-burger").on("click", function(event) {
     var id = $(this).data("id");
@@ -9,8 +12,7 @@ $(function() {
     };
     
     $("#modal-eating").modal();
-    let sound = document.getElementById("mmm-sound");
-    sound.play();
+    eatingSound.play();
 
     // Send the PUT request.
     setTimeout(() => {
@@ -29,8 +31,7 @@ $(function() {
   // Add a new order
   $(".order-burger-form").on("submit", function(event) {
     event.preventDefault();
-    let sound = document.getElementById("bell-sound");
-    sound.play();
+    bellSound.play();
     setTimeout(() => {
 
       let burgerType = $("input[type='radio'][name='burger_type']:checked").val();

@@ -1,21 +1,12 @@
-<audio id="bell-sound">
-  <source src="/assets/sounds/order-up.wav" type="audio/wav">
-</audio>
-<audio id="mmm-sound">
-  <source src="/assets/sounds/mmm.mp3" type="audio/mp3">
-</audio>
-
 <div class=" row mx-3 my-3 p-1 border burger-card">
-    <div class="col-md-10 pl-2"> 
-    <h6>{{name}}</h6>
-    </div>
-    <div class="col-md-2 pr-2">
+  <div class="col-md-12 justify-content-center"> 
+    <h6 class="float-left">{{name}}</h6>
+    {{!-- Don't show the 'EAT' button on orders which have already been eaten --}}
     {{#unless eaten}}
-      <button class="eat-burger" data-id="{{id}}" >EAT</button>
+      <button class="float-right eat-burger" data-id="{{id}}" >EAT</button>
     {{/unless}}
-
-    </div>
-    <p class="ml-4 my-0">Burger Type: {{burger_type}}</p>
-    <p class="ml-4 my-0">Bun: {{bun}}</p>
-    <p class="ml-4 my-0">Cheese: {{cheese}}</p>
+  </div>
+  <p class="ml-4 my-0">Burger Type: {{burger_type}}</p>
+  <p class="ml-4 my-0">Bun: {{bun}}</p>
+  <p class="ml-4 my-0">Cheese: {{cheese}}</p>
 </div>
