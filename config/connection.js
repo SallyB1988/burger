@@ -3,9 +3,9 @@ const mysql = require('mysql');
 // connection to mysql database
 var connection = mysql.createConnection({
   host: 'localhost',
-  port: 3306,
+  port: process.env.PORT || 3306, // SALLY -- Is this correct?
   user: 'root',
-  password: 'root',
+  password: 'root',     // Do I have to show everyone my password?
   database: 'burgers_db'
 });
 
