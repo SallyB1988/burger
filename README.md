@@ -7,10 +7,9 @@ On the left side of the screen, enter your name and select the type of burger, b
 ## Eat Your Burger
 Click on the `Eat` button on the ticket of the burger you would like to consume. You will see a quick image of someone enjoying the burger, and then the ticket will be moved to the 'Consumed Burgers' column.
 
-## Technologies Used
-Zippy's Burger Shop is deployed on Heroku and uses the following 
+## Code Details
+Zippy's Burger Shop is deployed on Heroku and uses the following technologies. This version of Zippy's uses a basic ORM written by me.
 * MySQL
-* Sequelize
 * NodeJS
 * Express
 * Handlebars
